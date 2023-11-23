@@ -7,17 +7,24 @@ void setup(){
 
 void draw(){
   background(0);
-  for (int i = particles.size() - 1; i >= 0; i--){
-    particles.get(i).update();
-    particles.get(i).display();
+<<<<<<< HEAD
+  for (int j = particles.size() - 1; j >= 0; j--){
+    particles.get(j).update();
+    particles.get(j).display();
     
     
-    Particle remove = particles.get(i);
+    Particle remove = particles.get(j);
       if (remove.position.y > height) {
-        particles.remove(i);
+        particles.remove(j);
       }
     }
   
+=======
+  for (int j = 0; j < particles.size(); j++){
+    particles.get(j).update();
+    particles.get(j).display();
+  }
+>>>>>>> origin/main
   if(mousePressed == true) {
     particles.add(new Particle(mouseX, mouseY));
   }
